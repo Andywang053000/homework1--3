@@ -1,0 +1,94 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    background-color: #1d428a;
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+.player-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.player-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.player-card:hover {
+    transform: translateY(-10px);
+}
+
+.player-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid #1d428a;
+}
+
+.player-card h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.player-card ul {
+    text-align: left;
+    margin: 10px;
+    padding: 0 20px;
+    list-style-type: circle;
+    color: #444;
+}
+
+details {
+    margin: 15px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    color: #1d428a;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+details p, details ul {
+    margin-top: 10px;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    background-color: #1d428a;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
