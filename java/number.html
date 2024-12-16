@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>猜數字遊戲</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input, button {
+      font-size: 16px;
+      padding: 5px 10px;
+      margin: 10px;
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>猜數字遊戲</h1>
+  <p>電腦隨機選了一個 1 到 100 的數字，快來挑戰吧！</p>
+  <input type="number" id="guess" placeholder="輸入你的猜測 (1-100)">
+  <button id="submit-btn">提交</button>
+  <button id="restart-btn" style="display: none;">重新開始</button>
+  <div id="message"></div>
+
+  <script src="code.js"></script>
+</body>
+</html>
