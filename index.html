@@ -1,0 +1,130 @@
+HTML (index.html):
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Airlines</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Top 6 Airlines in the World</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <main class="container">
+        <div class="card">
+            <img src="airline1.jpg" alt="Airline 1">
+            <h3>Airline 1</h3>
+            <p>Known for its excellent service and luxurious cabins.</p>
+        </div>
+        <div class="card">
+            <img src="airline2.jpg" alt="Airline 2">
+            <h3>Airline 2</h3>
+            <p>Offers a vast network of destinations worldwide.</p>
+        </div>
+        <div class="card">
+            <img src="airline3.jpg" alt="Airline 3">
+            <h3>Airline 3</h3>
+            <p>Exceptional in-flight dining and entertainment.</p>
+        </div>
+        <div class="card">
+            <img src="airline4.jpg" alt="Airline 4">
+            <h3>Airline 4</h3>
+            <p>Award-winning economy and premium classes.</p>
+        </div>
+        <div class="card">
+            <img src="airline5.jpg" alt="Airline 5">
+            <h3>Airline 5</h3>
+            <p>Innovative aircraft technology and safety records.</p>
+        </div>
+        <div class="card">
+            <img src="airline6.jpg" alt="Airline 6">
+            <h3>Airline 6</h3>
+            <p>Renowned for punctuality and customer care.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Top Airlines. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+CSS (styles.css):
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+}
+header {
+    background-color: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #023e8a;
+    padding: 0.5rem;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card h3 {
+    margin: 0;
+    padding: 1rem;
+    background-color: #0077b6;
+    color: white;
+}
+.card p {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+footer {
+    background-color: #023e8a;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+JavaScript (scripts.js):
+document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+        alert(`You selected ${card.querySelector('h3').textContent}`);
+    });
+});
